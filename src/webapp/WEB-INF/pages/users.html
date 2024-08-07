@@ -23,7 +23,7 @@
         <td th:text="${user.getLastName()}"/>
         <td>
             <div class="btn-group">
-                <a th:href="@{/users/{id}(id=${user.getId()})}" class="btn btn-primary">View</a>
+                <a th:href="@{/users/id(id=${user.getId()})}" class="btn btn-primary">View</a>
             </div>
         </td>
     </tr>
