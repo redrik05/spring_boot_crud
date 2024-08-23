@@ -1,6 +1,6 @@
 package ru.redrik.spring_boot_crud.model;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "users")
@@ -13,6 +13,8 @@ public class User {
     private String name;
     @Column(name = "last_name")
     private String lastName;
+    @Column
+    private String password = "test";
 
     public User(long id, String name, String lastName) {
         this.id = id;
@@ -27,6 +29,15 @@ public class User {
 
     public User() {
     }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
 
     public long getId() {
         return id;
